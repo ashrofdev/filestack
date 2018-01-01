@@ -14,8 +14,8 @@ class App extends Component {
       fileSize: '',
       date: '',
       alert: {
-        trigger: true,
-        type: 'negative'
+        trigger: false,
+        type: 'positive'
       }
     }
   }
@@ -54,10 +54,20 @@ class App extends Component {
 
     if (fileType !== 'other' && fileType !== 'document' && !file.type.includes(fileType)) {
       alert(`You can only save a ${fileType} file in this folder`)
+      this.setState({alert:{
+        trigger: true,
+        type: 'negative'
+      }})
     } else {
       alert('go ahead')
+      this.setState({alert:{
+        trigger: true,
+        type: 'positive'
+      }})
     }
-
+    setTimeout(() => {
+      document.querySelector('.alert').classList.remove('')
+    }, 5000);
 
   }
   alert = (type) => {
@@ -85,7 +95,7 @@ class App extends Component {
         <Body upload={this.upload} route={this.state.nav} navigate={this.navigate} 
         openFolder={this.openFolder} fileType={this.state.fileType}/>
         <footer>
-          <span>All rights reserved by <a href="https://ashrof.herokuapp.com/">ashrofDev</a></span>
+          <span>All rights reserved by <a blank href="https://ashrof.herokuapp.com/">ashrofDev</a></span>
         </footer>
       </div>
     );
