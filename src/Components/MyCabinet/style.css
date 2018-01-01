@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
+    box-shadow: 1px 1px 5px black;
 }
 .file {
     padding: 2rem;
@@ -23,7 +24,7 @@
     font-size: 7rem;
 }
 
-/* /////////////////// Styling cabinet content /////////////////// */
+/* /////////////////// Styling cabinet /////////////////// */
 
 .cabinet {
     padding: 2rem;
@@ -37,6 +38,13 @@
     border: 1px solid var(--text-dark);
     margin-top: 2rem;
     height: 50vh;
+}
+
+
+/* ///////////////////////////styling cabinet file content /////////////// */
+.content .filess {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* //////////////////styling cta section////////////////////// */

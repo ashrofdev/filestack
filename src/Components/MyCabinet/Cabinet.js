@@ -26,10 +26,10 @@ const Cabinet = ({fileType, upload}) => {
     return (
         <div className="cabinet page">
             <h2>Here are your {fileType} files</h2>
-            <div className="filess">
+            <div>
                 {
                     files.map(e=>{
-                        return <div style={{display:'flex', justifyContent:'space-between', padding: '.5rem', borderBottom: '1px solid black'}}>
+                        return <div className="filess">
                             <span>▶️</span> 
                             <p>{e.name}</p>
                             <p>{e.type}</p>

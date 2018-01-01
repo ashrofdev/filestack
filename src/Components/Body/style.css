@@ -91,4 +91,5 @@ li p {
     border: 1px solid currentColor;
     padding: 1rem 3rem;
     color: #fff;
+    box-shadow: 1px 1px 2px black;
 }
