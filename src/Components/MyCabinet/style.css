@@ -1,0 +1,40 @@
+/* ////////////// Styling cabinet ///////////////////////// */
+
+.content .files {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+.file {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: all .3s;
+}
+.file:hover {
+    background-color: rgba(12, 77, 12, 0.185);
+    transform: scale(.7);
+}
+.file figure {
+    font-size: 7rem;
+}
+
+/* /////////////////// Styling cabinet content /////////////////// */
+
+.cabinet {
+    padding: 2rem;
+}
+.cabinet h2 {
+    font-size: 1.3rem;
+    font-weight: 200;
+    font-style: italic;
+}
+.cabinet .files {
+    border: 1px solid var(--text-dark);
+    margin-top: 2rem;
+    height: 50vh;
+}

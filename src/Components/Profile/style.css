@@ -1,0 +1,15 @@
+.profile {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.profile figure {
+    margin: 3rem;
+}
+.profile .avatar {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+.profile p {
+    margin: 2rem;
+}
