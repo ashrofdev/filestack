@@ -48,7 +48,11 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <Body route={this.state.nav} navigate={this.navigate} openFolder={this.openFolder} fileType={this.state.fileType}/>
+        <Body route={this.state.nav} navigate={this.navigate} 
+        openFolder={this.openFolder} fileType={this.state.fileType}/>
+        <footer>
+          <span>All rights reserved by <a href="https://ashrof.herokuapp.com/">ashrofDev</a></span>
+        </footer>
       </div>
     );
   }
