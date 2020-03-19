@@ -74,3 +74,8 @@ main section {
     flex-direction: column-reverse;
   }
 }
+
+footer {
+  background-color: var(--primary-dark);
+  color: #777;
+}
