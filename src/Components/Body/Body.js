@@ -25,7 +25,7 @@ const Body = ({route, navigate, openFolder, fileType}) => {
                         {/* <li onClick={()=> navigate('profile')}><p>🗂 New File</p></li> */}
                         {
                             route === 'settings'?
-                            <li className="clicked" onClick={()=> navigate('profile')}><p>⚙️ Settings</p></li>
+                            <li className="clicked" onClick={()=> navigate('profile')}><p>⚙️ Settings</p></li>:
                             <li onClick={()=> navigate('settings')}><p>⚙️ Settings</p></li>
                         }
                     </ul>
