@@ -2,7 +2,7 @@ import React from 'react';
 import Cabinet from './Cabinet';
 import './style.css'
 
-const MyCabinet = ({openFolder, nav, fileType}) => {
+const MyCabinet = ({openFolder, nav, fileType, upload}) => {
     return (
         <div className="page">
             <h2 className="head">Welcome to your cabinet Ashraf</h2>
@@ -31,7 +31,7 @@ const MyCabinet = ({openFolder, nav, fileType}) => {
                     </div>
                 </div>:
                 nav === 'open'?
-                <Cabinet fileType={fileType}/>:null
+                <Cabinet upload={upload} fileType={fileType}/>:null
             }
         </div>
     );

@@ -4,7 +4,20 @@
   --text-dark:rgb(32, 65, 32);
 }
 
-
+@keyframes alert {
+  0% {
+    top: 0;
+  }
+  80% {
+    top: 4rem;
+    opacity: 1;
+    
+  }
+  100% {
+    top: -2rem;
+    opacity: 1;
+  }
+}
 
 
 * {
@@ -25,6 +38,29 @@ button:active{
 .App {
   font-family: sans-serif;
 }
+
+.alert {
+  animation: alert 5s alternate;
+  padding: .5rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+  width: max-content;
+  box-shadow: 2px 3px 4px black;
+  position: fixed;
+  left: 50%;
+  top: -2rem;
+  opacity: 0;
+  z-index: 100;
+}
+.positive {
+  background-color: #fff;
+  color: var(--text-dark);
+}
+.negative {
+  background-color: red;
+  color: #fff;
+}
+
 .App-header {
   background-color: #282c34;
   color: white;
@@ -76,6 +112,11 @@ main section {
 }
 
 footer {
-  background-color: var(--primary-dark);
-  color: #777;
+  background-color: black;
+  color: rgb(80, 79, 79);
+  padding: 1rem;
+  text-align: center;
+}
+footer a {
+  color: green;
 }

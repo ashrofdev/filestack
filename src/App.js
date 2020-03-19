@@ -12,7 +12,11 @@ class App extends Component {
       fileType: '',
       fileName: '',
       fileSize: '',
-      date: ''
+      date: '',
+      alert: {
+        trigger: true,
+        type: 'negative'
+      }
     }
   }
   
@@ -43,12 +47,42 @@ class App extends Component {
     this.navigate('open')
   }
 
+  upload = (item) => {
+    const fileType = this.state.fileType
+    const file = item.target.files[0]
+    console.log(file.type)
+
+    if (fileType !== 'other' && fileType !== 'document' && !file.type.includes(fileType)) {
+      alert(`You can only save a ${fileType} file in this folder`)
+    } else {
+      alert('go ahead')
+    }
+
+
+  }
+  alert = (type) => {
+    this.setState({alert: {
+      trigger: true,
+      type
+    }})
+  }
+
   render() {
     
     return (
       <div className="App">
+        {
+          this.state.alert.trigger && this.state.alert.type === 'positive'?
+          <div className="alert positive">
+            🔔 positive
+          </div>:
+          this.state.alert.trigger && this.state.alert.type === 'negative'?
+          <div className="alert negative">
+           Negative 🚫
+          </div>:null
+        }
         <Header/>
-        <Body route={this.state.nav} navigate={this.navigate} 
+        <Body upload={this.upload} route={this.state.nav} navigate={this.navigate} 
         openFolder={this.openFolder} fileType={this.state.fileType}/>
         <footer>
           <span>All rights reserved by <a href="https://ashrof.herokuapp.com/">ashrofDev</a></span>
