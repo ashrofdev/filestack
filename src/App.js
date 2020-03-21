@@ -8,6 +8,7 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
+      fixHeader: false,
       nav: 'cabinet',
       fileType: '',
       fileName: '',
@@ -21,11 +22,23 @@ class App extends Component {
   }
   
   componentDidMount(){
+
+    window.addEventListener('scroll',this.handleScroll)
     
     this.getDate()
     setTimeout(() => {
       console.log(this.state.date)
     }, 2000);
+  }
+
+  handleScroll = () => {
+    if(window.scrollY > 40){
+      this.setState({fixHeader: true})
+      console.log('ddddd')
+    } else {
+      this.setState({fixHeader: false})
+      console.log('ggggg')
+    }
   }
 
   getDate = () => {
@@ -91,7 +104,7 @@ class App extends Component {
            Negative 🚫
           </div>:null
         }
-        <Header/>
+        <Header fixHeader={this.state.fixHeader}/>
         <Body upload={this.upload} route={this.state.nav} navigate={this.navigate} 
         openFolder={this.openFolder} fileType={this.state.fileType}/>
         <footer>

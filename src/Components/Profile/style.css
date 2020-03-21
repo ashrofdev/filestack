@@ -17,4 +17,5 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     font-size: 1.2rem;
+    align-items: center;
 }

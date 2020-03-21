@@ -16,6 +16,7 @@ const Profile = () => {
                 <p>MusicL {80}mb</p>
                 <p>Documants: {7}mb</p>
                 <p>Other files: {0}mb</p>
+                <h3>Total: {345}mb</h3>
             </div>
         </div>
     );

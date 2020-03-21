@@ -16,6 +16,7 @@
 
 .body {
     display: grid;
+    transition: all 1s;
     grid-template-columns: minmax(10rem, 15rem) minmax(2rem, 1fr) repeat(3, minmax(12rem, 25rem)) minmax(2rem, 1fr);
 }
 .side-nav {
@@ -27,6 +28,7 @@
     display: flex;
     flex-direction: column;
     z-index: 10;
+    padding-top: 8rem;
 }
 figure {
     text-align: center;
@@ -85,11 +87,10 @@ li p {
 .content {
     grid-column: 3/6;
     padding: 2rem;
+    padding-top: 5rem;
 }
 .content .head {
     background-color: var(--text-dark);
-    border: 1px solid currentColor;
     padding: 1rem 3rem;
     color: #fff;
-    box-shadow: 1px 1px 2px black;
 }

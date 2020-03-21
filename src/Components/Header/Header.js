@@ -1,11 +1,18 @@
 import React from 'react';
 import './style.css'
 
-const Header = ({fileType}) => {
+const Header = ({fixHeader}) => {
     return (
-        <div className="header">
+        <div className="header" 
+            style={
+                fixHeader ? {
+                    backgroundColor: 'rgb(45, 53, 45)',
+                    boxShadow: '2px 0 1rem black'
+                }: null
+            }
+        >
             <h1 className="heading">Filesurge</h1>
-            <p>{fileType}</p>
+            <button>Log out</button>
         </div>
     );
 };
