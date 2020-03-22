@@ -9,7 +9,10 @@ class Home extends Component {
             <div className="home">
                 <header>
                     <div className="header_top">
-                        <h1>📚 Filesurge</h1>
+                        <div className="name">
+                            <img className="logo" src={require('./logogreen.png')}/>
+                            <h1>Filesurge</h1>
+                        </div>
                         <button className="login" onClick={login}>Login</button>
                     </div>
                     <div className="header_body">
@@ -60,14 +63,18 @@ class Home extends Component {
                 </section>
                 <footer>
                     <div className="left">
-                        <h1>Filesurge</h1>
+                        <div className="name">
+                            <img className="logo" src={require('./logogreen.png')}/>
+                            <h1>Filesurge</h1>
+                        </div>
                         <p className="p">Lorem ispum dorlasit tulamesin illarison indiginious hjdguyre 
                         kuayg erh fyrg rekyg erhg fyeurg.</p>
                         <p className="p">☎ Phone: +234 816 909 4945</p>
-                        <p className="p">✉️ Email: salmanashraf853@gmail.com</p>
+                        <p style={{marginBottom: '1rem'}} className="p">✉️ Email: salmanashraf853@gmail.com</p>
+                        <span style={{color: '#777', padding: '1rem'}}>&copy; All rights reserved By <a href="http://ashrof.herokuapp.com/">ashrofDev</a></span>
                     </div>
                     <div className="right">
-
+                        <img style={{width: '15rem', opacity: '.2'}} src={require('./logogreen.png')}/>
                     </div>
                 </footer>
             </div>
