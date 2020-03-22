@@ -123,7 +123,7 @@ img {
     height: 100%;
 }
 
-section button{
+.home section button{
     padding: 1rem 3rem;
     font-size: 1.2rem;
     color: var(--white);
@@ -134,11 +134,11 @@ section button{
     border: none;
     position: relative;
 }
-section button:hover{
+.home section button:hover{
     transform: translateY(-10%);
     box-shadow: 1px 0px 1rem rgba(0, 0, 0, 0.911);
 }
-section button::before{
+.home section button::before{
     content: '';
     position: absolute;
     top: 0;
@@ -151,7 +151,7 @@ section button::before{
     transition: all .5s;
 }
 
-section button:hover::before{
+.home section button:hover::before{
     transform: scale(1.3);
     opacity: 0;
 }
@@ -187,12 +187,18 @@ footer .right {
     .home header {
         height: 60vh;
     }
+    .header_body .heading {
+        font-size: 2.5rem;
+    }
     .header_body p {
         width: 100%;
     }
     .home header, .home section, footer {
         display: block;
-        padding: 2rem;
+        padding: 5rem 2rem;
+    }
+    .home header {
+        padding-bottom: 5rem;
     }
     .left p, .right p {
         margin-bottom: 2rem;

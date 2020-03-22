@@ -79,12 +79,6 @@ button:active{
 .App-header p {
   padding: .4rem .1rem;
 }
-.navsearch {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 main {
   display: grid;

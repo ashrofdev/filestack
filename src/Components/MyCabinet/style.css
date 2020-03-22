@@ -51,7 +51,7 @@
 .content .filess:hover {
     background-color: rgba(35, 245, 7, 0.068);
 }
-.delete {
+.filess .delete {
     color: var(--white);
     font-weight: 900;
     background-color: red;
