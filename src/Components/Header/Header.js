@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css'
 
-const Header = ({fixHeader}) => {
+const Header = ({fixHeader, logOut}) => {
     return (
         <div className="header" 
             style={
@@ -12,7 +12,7 @@ const Header = ({fixHeader}) => {
             }
         >
             <h1 className="heading">Filesurge</h1>
-            <button>Log out</button>
+            <button onClick={logOut}>Log out</button>
         </div>
     );
 };

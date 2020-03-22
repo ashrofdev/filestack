@@ -44,6 +44,28 @@
 .content .filess {
     display: flex;
     justify-content: space-between;
+    padding: .2rem .5rem;
+    cursor: pointer;
+    align-items: center;
+}
+.content .filess:hover {
+    background-color: rgba(35, 245, 7, 0.068);
+}
+.delete {
+    color: var(--white);
+    font-weight: 900;
+    background-color: red;
+    border-radius: 10rem;
+    height: 1.3rem;
+    width: 1.4rem;
+    border: none;
+    opacity: 0;
+    transform: translateX(1000%);
+    transition: all .2s;
+}
+.content .filess:hover .delete {
+    opacity: 1;
+    transform: none;
 }
 
 /* //////////////////styling cta section////////////////////// */

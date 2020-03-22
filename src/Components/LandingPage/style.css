@@ -1,0 +1,169 @@
+.home {
+    font-family: sans-serif;
+}
+.home header {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) repeat(6, 12rem) minmax(2rem, 1fr);
+}
+
+.home .header_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 2/8;
+    font-family: monospace;
+    color: black;
+}
+.home .header_top h1 {
+    font-size: 2rem;
+}
+.header_top .login {
+    padding: .5rem 2rem;
+    border-radius: 10rem;
+    background-color: transparent;
+    color: var(--text-light);
+    border-color: currentColor;
+    font-size: 1rem;
+    transition: all .4s;
+}
+.header_top .login:hover {
+    background-color: var(--text-light);
+    color: var(--white);
+}
+.header_body {
+    grid-column: 2/8;
+    margin-top: 10rem;
+    justify-self: center;
+    text-align: center;
+}
+.header_body .heading {
+    font-size: 3rem;
+    font-weight: 200;
+    color: black;
+    font-family: sans-serif;
+}
+.header_body p {
+    text-align: center;
+    width: 40rem;
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: var(--text-dark);
+    margin-top: 3rem;
+    letter-spacing: .1rem;
+    word-spacing: .2rem;
+    line-height: 1.7rem;
+}
+.header_body button{
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    border-radius: 10rem;
+    background-color: var(--color-primary);
+    margin-top: 3rem;
+    box-shadow: 1px 0px 1rem rgba(0, 0, 0, 0.541);
+    border: none;
+    position: relative;
+}
+.header_body button:hover{
+    transform: translateY(-10%);
+    box-shadow: 1px 0px 1rem rgba(0, 0, 0, 0.911);
+}
+.header_body button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    background-color: var(--color-primary);
+    z-index: -1;
+    transition: all .5s;
+}
+
+.header_body button:hover::before{
+    transform: scale(1.3);
+    opacity: 0;
+}
+
+.home section {
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) repeat(6, 12rem) minmax(2rem, 1fr);
+    align-items: center;
+}
+.home section .left {
+    grid-column: 2/5;
+    margin-right: 5rem;
+}
+.left p, .right p {
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: black;
+    margin-top: 1rem;
+    letter-spacing: .1rem;
+    word-spacing: .1rem;
+    line-height: 1.7rem;
+}
+.home section .right {
+    grid-column: 5/8;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+
+section button{
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    color: var(--white);
+    border-radius: 10rem;
+    background-color: var(--color-primary);
+    margin-top: 3rem;
+    box-shadow: 1px 0px 1rem rgba(0, 0, 0, 0.541);
+    border: none;
+    position: relative;
+}
+section button:hover{
+    transform: translateY(-10%);
+    box-shadow: 1px 0px 1rem rgba(0, 0, 0, 0.911);
+}
+section button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    background-color: var(--color-primary);
+    z-index: -1;
+    transition: all .5s;
+}
+
+section button:hover::before{
+    transform: scale(1.3);
+    opacity: 0;
+}
+
+footer {
+    color: var(--white);
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: minmax(2rem, 1fr) repeat(6, 12rem) minmax(2rem, 1fr);
+}
+
+footer div {
+    grid-column: 2/5;
+    text-align: left;
+}
+footer div h1 {
+    margin-bottom: 3rem;
+}
+
+footer .p {
+    color: var(--white);
+    text-align: left;
+}

@@ -34,6 +34,7 @@ const Cabinet = ({fileType, upload}) => {
                             <p>{e.name}</p>
                             <p>{e.type}</p>
                             <p>{e.size}</p>
+                            <button className="delete">X</button>
                          </div>
                     })
                 }

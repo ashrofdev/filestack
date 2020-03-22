@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import './App.css'
 import Header from './Components/Header/Header';
 import Body from './Components/Body/Body';
+import Home from './Components/LandingPage/Home';
 
 class App extends Component {
 
   constructor(){
     super()
     this.state = {
+      route: 'home',
       fixHeader: false,
       nav: 'cabinet',
       fileType: '',
@@ -89,27 +91,36 @@ class App extends Component {
       type
     }})
   }
+  login = () => {
+    this.setState({route: 'login'})
+  }
 
   render() {
     
     return (
-      <div className="App">
+      <div>
         {
-          this.state.alert.trigger && this.state.alert.type === 'positive'?
-          <div className="alert positive">
-            🔔 positive
-          </div>:
-          this.state.alert.trigger && this.state.alert.type === 'negative'?
-          <div className="alert negative">
-           Negative 🚫
-          </div>:null
+          this.state.route === 'home'?
+          <Home login={this.login}/>:
+          <div className="App">
+            {
+              this.state.alert.trigger && this.state.alert.type === 'positive'?
+              <div className="alert positive">
+                🔔 positive
+              </div>:
+              this.state.alert.trigger && this.state.alert.type === 'negative'?
+              <div className="alert negative">
+              Negative 🚫
+              </div>:null
+            }
+            <Header logOut={()=>this.setState({route: 'home'})} fixHeader={this.state.fixHeader}/>
+            <Body upload={this.upload} route={this.state.nav} navigate={this.navigate} 
+            openFolder={this.openFolder} fileType={this.state.fileType}/>
+            <footer>
+              <span>All rights reserved by <a blank href="https://ashrof.herokuapp.com/">ashrofDev</a></span>
+            </footer>
+          </div>
         }
-        <Header fixHeader={this.state.fixHeader}/>
-        <Body upload={this.upload} route={this.state.nav} navigate={this.navigate} 
-        openFolder={this.openFolder} fileType={this.state.fileType}/>
-        <footer>
-          <span>All rights reserved by <a blank href="https://ashrof.herokuapp.com/">ashrofDev</a></span>
-        </footer>
       </div>
     );
   }
