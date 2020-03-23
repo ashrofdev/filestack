@@ -104,7 +104,7 @@ class App extends Component {
           this.state.route === 'home'?
           <Home login={this.login} signUp={()=>this.setState({route: 'signup'})}/>:
           this.state.route === 'signup'?
-          <Signup/>:
+          <Signup register={()=>this.setState({route: 'login'})}/>:
           <div className="App">
             {
               this.state.alert.trigger && this.state.alert.type === 'positive'?

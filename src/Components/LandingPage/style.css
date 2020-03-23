@@ -171,26 +171,26 @@ img {
     opacity: 0;
 }
 
-footer {
+.footer {
     color: var(--white);
     padding: 5rem 0;
     display: grid;
     grid-template-columns: minmax(2rem, 1fr) repeat(6, minmax(8rem, 12rem)) minmax(2rem, 1fr);
 }
 
-footer .left {
+.footer .left {
     grid-column: 2/5;
     text-align: left;
 }
-footer .name {
+.footer .name {
     margin-bottom: 2rem;
 }
 
-footer .p {
+.footer .p {
     color: var(--white);
     text-align: left;
 }
-footer .right {
+.footer .right {
     grid-column: 6/8;
 }
 

@@ -10,15 +10,16 @@
     font-family: monospace;
     color: var(--text-light);
 }
-.content {
+.page_content {
     display: flex;
     flex-direction: column;
     width: 20rem;
     margin: auto;
     padding: 2rem 1rem;
     background-color: rgba(215, 248, 215, 0.075);
+    box-shadow: 1px 1px 3px rgba(170, 169, 169, 0.185);
 }
-.content form {
+.page_content form {
     display: flex;
     flex-direction: column;
     padding: 2rem 1rem;
@@ -37,27 +38,28 @@ form input::placeholder {
     color: rgba(8, 54, 2, 0.534);
     font-style: italic;
 }
-.content .btns {
+.page_content .btns {
     display: flex;
     justify-content: flex-end;
 }
-.content .btns button {
+.page_content .btns button {
     background-color: transparent;
     border: none;
     transition: all .3s;
 }
-.content .btns button:hover {
+.page_content .btns button:hover {
     color: var(--text-light);
     text-decoration: underline;
 }
-.content .btns .btn {
+.page_content .btns .btn {
     margin-left: 1rem;
-    padding: .5rem 1rem;
+    padding: .5rem 1.5rem;
     text-align: right;
     color: var(--white);
     background-color: var(--color-primary);
+    border-radius: 10rem;
 }
-.content .btns .btn:hover {
+.page_content .btns .btn:hover {
     background-color: var(--text-light);
     text-decoration: none;
     color: white;

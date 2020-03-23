@@ -64,7 +64,7 @@ class Home extends Component {
                         <button>Get Started for Free</button>
                     </div>
                 </section>
-                <footer>
+                <footer className="footer">
                     <div className="left">
                         <div className="name">
                             <img className="logo" src={require('./logogreen.png')}/>
