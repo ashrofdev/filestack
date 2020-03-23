@@ -9,11 +9,50 @@
         transform: none;
     }
 }
+@keyframes page2 {
+    0% {
+        opacity: 0;
+        transform: translateY(2%);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes button {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    70% {
+        transform: translateX(5%);
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+@keyframes btn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(5%);
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
 
 .page {
     animation: page 1s ease-out;
 }
-
+.page2 {
+    animation: page2 .4s ease-out;
+}
 .body {
     display: grid;
     transition: all 1s;

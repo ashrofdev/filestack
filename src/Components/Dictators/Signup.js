@@ -3,7 +3,7 @@ import './style.css'
 
 const Signup = ({register, login}) => {
     return (
-        <div className="signup_page">
+        <div className="signup_page page2">
             <div className="page_content">
             <header>SIGN UP</header>
                 <form>

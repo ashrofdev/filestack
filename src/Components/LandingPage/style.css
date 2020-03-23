@@ -16,6 +16,7 @@
     color: black;
 }
 .name {
+    animation: page 1s;
     display: flex;
     align-items: center;
 }
@@ -27,6 +28,8 @@
     font-size: 2rem;
 }
 .header_top .login {
+    animation: button 2s 1s;
+    animation-fill-mode: backwards;
     padding: .5rem 1rem;
     border-radius: 10rem;
     background-color: transparent;
@@ -41,6 +44,8 @@
     text-decoration: underline;
 }
 .header_top .signup {
+    animation: button 1s 1s;
+    animation-fill-mode: backwards;
     padding: .5rem 1rem;
     border-radius: 10rem;
     background-color: transparent;
@@ -79,6 +84,8 @@
     line-height: 1.7rem;
 }
 .header_body button{
+    animation: btn 1s 1.5s;
+    animation-fill-mode: backwards;
     padding: 1rem 3rem;
     font-size: 1.2rem;
     color: var(--white);
