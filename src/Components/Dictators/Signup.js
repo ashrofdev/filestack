@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css'
 
-const Signup = ({register}) => {
+const Signup = ({register, login}) => {
     return (
         <div className="signup_page">
             <div className="page_content">
@@ -13,7 +13,7 @@ const Signup = ({register}) => {
                     <input type="email" placeholder="Email address"/>
                 </form>
                 <div className="btns">
-                    <button>Already have an account?</button>
+                    <button onClick={login}>Already have an account?</button>
                     <button className="btn" onClick={register}>Signup</button>
                 </div>
             </div>

@@ -4,13 +4,14 @@ import Header from './Components/Header/Header';
 import Body from './Components/Body/Body';
 import Home from './Components/LandingPage/Home';
 import Signup from './Components/Dictators/Signup';
+import LogIn from './Components/Dictators/Login';
 
 class App extends Component {
 
   constructor(){
     super()
     this.state = {
-      route: 'signup',
+      route: 'home',
       fixHeader: false,
       nav: 'cabinet',
       fileType: '',
@@ -104,7 +105,9 @@ class App extends Component {
           this.state.route === 'home'?
           <Home login={this.login} signUp={()=>this.setState({route: 'signup'})}/>:
           this.state.route === 'signup'?
-          <Signup register={()=>this.setState({route: 'login'})}/>:
+          <Signup register={()=>this.setState({route: 'cabinet'})} login={this.login}/>:
+          this.state.route === 'login'?
+          <LogIn login={()=>this.setState({route: 'cabinet'})} signUp={()=>this.setState({route: 'signup'})}/>:
           <div className="App">
             {
               this.state.alert.trigger && this.state.alert.type === 'positive'?

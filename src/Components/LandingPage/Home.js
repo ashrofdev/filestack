@@ -22,7 +22,7 @@ class Home extends Component {
                         <h1 className="heading">Online File Storage Made Easy</h1>
                         <p>Filesurge reimagines how we save important data. You now have access to a
                         secure, fast and reliable tool you can entrust your data with.</p>
-                        <button>Get Started for Free</button>
+                        <button onClick={signUp}>Get Started for Free</button>
                     </div>
                 </header>
                 <section style={{backgroundColor: 'rgba(226, 248, 226, 0.281)'}}>
@@ -61,7 +61,7 @@ class Home extends Component {
                 <section>
                     <div style={{textAlign: 'center', gridColumn: '2/8'}}>
                         <h2 style={{fontSize: '3rem', fontWeight: '100'}} className="head">Your Cabinet Awaits You</h2>
-                        <button>Get Started for Free</button>
+                        <button onClick={signUp}>Get Started for Free</button>
                     </div>
                 </section>
                 <footer className="footer">
@@ -74,7 +74,7 @@ class Home extends Component {
                         kuayg erh fyrg rekyg erhg fyeurg.</p>
                         <p className="p">☎ Phone: +234 816 909 4945</p>
                         <p style={{marginBottom: '1rem'}} className="p">✉️ Email: salmanashraf853@gmail.com</p>
-                        <span style={{color: '#777', padding: '1rem'}}>&copy; All rights reserved By <a href="http://ashrof.herokuapp.com/">ashrofDev</a></span>
+                        <span style={{color: '#777', padding: '1rem'}}>&copy; All rights reserved By <a href="https://ashrof.herokuapp.com/">ashrofDev</a></span>
                     </div>
                     <div className="right">
                         <img style={{width: '15rem', opacity: '.2'}} src={require('./logogreen.png')}/>

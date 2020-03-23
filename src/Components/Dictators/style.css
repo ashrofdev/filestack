@@ -26,7 +26,8 @@
 }
 form input {
     margin: .5rem;
-    padding: .5rem;
+    padding: 1rem;
+    font-size: 1.1rem;
     border-top: none;
     border-left: none;
     border-right: none;
