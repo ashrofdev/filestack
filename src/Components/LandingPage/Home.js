@@ -4,7 +4,7 @@ import './style.css'
 class Home extends Component {
     render() {
     
-        const {login} = this.props
+        const {login, signUp} = this.props
         return (
             <div className="home">
                 <header>
@@ -13,7 +13,10 @@ class Home extends Component {
                             <img className="logo" src={require('./logogreen.png')}/>
                             <h1>Filesurge</h1>
                         </div>
-                        <button className="login" onClick={login}>Login</button>
+                        <div className="nav">
+                            <button className="login" onClick={login}>SignIn</button>
+                            <button className="signup" onClick={signUp}>SignUp</button>
+                        </div>
                     </div>
                     <div className="header_body">
                         <h1 className="heading">Online File Storage Made Easy</h1>

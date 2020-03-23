@@ -27,15 +27,30 @@
     font-size: 2rem;
 }
 .header_top .login {
-    padding: .5rem 2rem;
+    padding: .5rem 1rem;
+    border-radius: 10rem;
+    background-color: transparent;
+    color: var(--text-light);
+    border: none;
+    font-size: .8rem;
+    margin-right: 1rem;
+    transition: all .4s;
+}
+
+.header_top .login:hover {
+    text-decoration: underline;
+}
+.header_top .signup {
+    padding: .5rem 1rem;
     border-radius: 10rem;
     background-color: transparent;
     color: var(--text-light);
     border-color: currentColor;
-    font-size: 1rem;
+    font-size: .8rem;
+    margin-right: 1rem;
     transition: all .4s;
 }
-.header_top .login:hover {
+.header_top .signup:hover {
     background-color: var(--text-light);
     color: var(--white);
 }

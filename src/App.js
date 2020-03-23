@@ -3,13 +3,14 @@ import './App.css'
 import Header from './Components/Header/Header';
 import Body from './Components/Body/Body';
 import Home from './Components/LandingPage/Home';
+import Signup from './Components/Dictators/Signup';
 
 class App extends Component {
 
   constructor(){
     super()
     this.state = {
-      route: 'home',
+      route: 'signup',
       fixHeader: false,
       nav: 'cabinet',
       fileType: '',
@@ -101,7 +102,9 @@ class App extends Component {
       <div>
         {
           this.state.route === 'home'?
-          <Home login={this.login}/>:
+          <Home login={this.login} signUp={()=>this.setState({route: 'signup'})}/>:
+          this.state.route === 'signup'?
+          <Signup/>:
           <div className="App">
             {
               this.state.alert.trigger && this.state.alert.type === 'positive'?

@@ -1,0 +1,64 @@
+/* ///////////////////////  styling signup Page ///////////////////////// */
+
+.signup_page {
+    padding: 5rem;
+    text-align: center;
+}
+
+.signup_page header {
+    font-size: 3rem;
+    font-family: monospace;
+    color: var(--text-light);
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin: auto;
+    padding: 2rem 1rem;
+    background-color: rgba(215, 248, 215, 0.075);
+}
+.content form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
+form input {
+    margin: .5rem;
+    padding: .5rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background-color: transparent;
+    border-width: .1rem;
+}
+form input::placeholder {
+    color: rgba(8, 54, 2, 0.534);
+    font-style: italic;
+}
+.content .btns {
+    display: flex;
+    justify-content: flex-end;
+}
+.content .btns button {
+    background-color: transparent;
+    border: none;
+    transition: all .3s;
+}
+.content .btns button:hover {
+    color: var(--text-light);
+    text-decoration: underline;
+}
+.content .btns .btn {
+    margin-left: 1rem;
+    padding: .5rem 1rem;
+    text-align: right;
+    color: var(--white);
+    background-color: var(--color-primary);
+}
+.content .btns .btn:hover {
+    background-color: var(--text-light);
+    text-decoration: none;
+    color: white;
+}
