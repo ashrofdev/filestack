@@ -144,7 +144,10 @@ img {
     width: 100%;
     height: 100%;
 }
-
+.home section .head {
+    font-size: 3rem;
+    font-weight: 100;
+}
 .home section button{
     padding: 1rem 3rem;
     font-size: 1.2rem;
@@ -207,7 +210,7 @@ img {
 
 @media only screen and (max-width: 660px) {
     .home header {
-        height: 60vh;
+        height: 100%
     }
     .header_body .heading {
         font-size: 2.5rem;
@@ -215,7 +218,7 @@ img {
     .header_body p {
         width: 100%;
     }
-    .home header, .home section, footer {
+    .home header, .home section, .footer {
         display: block;
         padding: 5rem 2rem;
     }
@@ -225,8 +228,23 @@ img {
     .left p, .right p {
         margin-bottom: 2rem;
     }
+    .home section .head {
+        font-size: 2rem;
+    }
     .reverse {
         display: flex;
         flex-direction: column-reverse;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .home header {
+        padding: .5rem;
+        padding-bottom: 2rem;
+    }
+    .home .header_top h1 {
+        font-size: 1.3rem;
+    }
+    .logo {
+        width: 2rem;
     }
 }

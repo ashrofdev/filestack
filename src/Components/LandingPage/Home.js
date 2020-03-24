@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './style.css'
+import Slide from 'react-reveal/Slide'
+import Fade from 'react-reveal/Fade'
 
 class Home extends Component {
     render() {
@@ -26,42 +28,58 @@ class Home extends Component {
                     </div>
                 </header>
                 <section style={{backgroundColor: 'rgba(226, 248, 226, 0.281)'}}>
-                    <div className="left">
-                        <h2>Get Started</h2>
-                        <p>Generate meaningful discussions with your audience and build a strong, 
-                        loyal community. Thnk of the insightful conversations you miss out with a 
-                        feedback from.</p>
-                    </div>
-                    <div className="right">
-                        <img src={require('./2.svg')}/>
-                    </div>
+                    <Fade left delay={1000}>
+                        <div className="left">
+                            <h2>Get Started</h2>
+                            <p>Generate meaningful discussions with your audience and build a strong, 
+                            loyal community. Thnk of the insightful conversations you miss out with a 
+                            feedback from.</p>
+                        </div>
+                    </Fade>
+                    <Fade delay={500}>
+                        <div className="right">
+                            <img src={require('./2.svg')}/>
+                        </div>
+                    </Fade>
                 </section>
                 <section>
-                    <div className="left">
-                        <img src={require('./1.svg')}/>
-                    </div>
-                    <div className="right">
-                        <h2>Get Started</h2>
-                        <p>Generate meaningful discussions with your audience and build a strong, 
-                        loyal community. Thnk of the insightful conversations you miss out with a 
-                        feedback from.</p>
-                    </div>
+                    <Fade bottom duration={2000}>
+                        <div className="left">
+                            <img src={require('./1.svg')}/>
+                        </div>
+                    </Fade>
+                    <Fade top duration={2000}>
+                        <div className="right">
+                            <h2>Get Started</h2>
+                            <p>Generate meaningful discussions with your audience and build a strong, 
+                            loyal community. Thnk of the insightful conversations you miss out with a 
+                            feedback from.</p>
+                        </div>
+                    </Fade>
                 </section>
                 <section style={{backgroundColor: 'rgba(226, 248, 226, 0.281)'}}>
-                    <div className="left">
-                        <h2>Get Started</h2>
-                        <p>Generate meaningful discussions with your audience and build a strong, 
-                        loyal community. Thnk of the insightful conversations you miss out with a 
-                        feedback from.</p>
-                    </div>
-                    <div className="right">
-                        <img src={require('./3.svg')}/>
-                    </div>
+                    <Fade left>
+                        <div className="left">
+                            <h2>Get Started</h2>
+                            <p>Generate meaningful discussions with your audience and build a strong, 
+                            loyal community. Thnk of the insightful conversations you miss out with a 
+                            feedback from.</p>
+                        </div>
+                    </Fade>
+                    <Fade right>
+                        <div className="right">
+                            <img src={require('./3.svg')}/>
+                        </div>
+                    </Fade>
                 </section>
                 <section>
                     <div style={{textAlign: 'center', gridColumn: '2/8'}}>
-                        <h2 style={{fontSize: '3rem', fontWeight: '100'}} className="head">Your Cabinet Awaits You</h2>
-                        <button onClick={signUp}>Get Started for Free</button>
+                        <Fade right duration={1200}>
+                            <h2 className="head">Your Cabinet Awaits You</h2>
+                        </Fade>
+                        <Fade left duration={1000} delay={500}>
+                            <button onClick={signUp}>Get Started for Free</button>
+                        </Fade>
                     </div>
                 </section>
                 <footer className="footer">

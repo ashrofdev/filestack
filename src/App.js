@@ -12,6 +12,8 @@ class App extends Component {
     super()
     this.state = {
       route: 'home',
+      users: [],
+      user: {},
       fixHeader: false,
       nav: 'cabinet',
       fileType: '',
@@ -96,6 +98,23 @@ class App extends Component {
   login = () => {
     this.setState({route: 'login'})
   }
+  register = (user) => {
+    this.state.users.push(user)
+    this.setState({route: 'cabinet'})
+    console.log(this.state.users)
+  }
+
+  authenticate = (user) => {
+    this.state.users.forEach(e=>{
+      if (user.username === e.username) {
+        console.log(e)
+        this.setState({route: 'cabinet'})
+      } else {
+        console.log('authentication failed')
+        console.log(user)
+      }
+    })
+  }
 
   render() {
     
@@ -105,9 +124,9 @@ class App extends Component {
           this.state.route === 'home'?
           <Home login={this.login} signUp={()=>this.setState({route: 'signup'})}/>:
           this.state.route === 'signup'?
-          <Signup register={()=>this.setState({route: 'cabinet'})} login={this.login}/>:
+          <Signup register={this.register} login={this.login}/>:
           this.state.route === 'login'?
-          <LogIn login={()=>this.setState({route: 'cabinet'})} signUp={()=>this.setState({route: 'signup'})}/>:
+          <LogIn login={this.authenticate} signUp={()=>this.setState({route: 'signup'})}/>:
           <div className="App">
             {
               this.state.alert.trigger && this.state.alert.type === 'positive'?
