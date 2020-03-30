@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css'
-import Slide from 'react-reveal/Slide'
 import Fade from 'react-reveal/Fade'
+
 
 class Home extends Component {
     render() {
@@ -27,48 +27,51 @@ class Home extends Component {
                         <button onClick={signUp}>Get Started for Free</button>
                     </div>
                 </header>
-                <section style={{backgroundColor: 'rgba(226, 248, 226, 0.281)'}}>
+                <section>
                     <Fade left delay={1000}>
                         <div className="left">
                             <h2>Get Started</h2>
-                            <p>Generate meaningful discussions with your audience and build a strong, 
-                            loyal community. Thnk of the insightful conversations you miss out with a 
-                            feedback from.</p>
+                            <p>
+                                Sign up now and gain access to a free, fast and secure method
+                                of saving files of different format.
+                            </p>
                         </div>
                     </Fade>
                     <Fade delay={500}>
-                        <div className="right">
-                            <img src={require('./2.svg')}/>
+                        <div style={{padding: '5rem'}} className="right">
+                            <img  src={require('./svgs/3.png')}/>
                         </div>
                     </Fade>
                 </section>
                 <section>
                     <Fade bottom duration={2000}>
                         <div className="left">
-                            <img src={require('./1.svg')}/>
+                            <img src={require('./svgs/8.png')}/>
                         </div>
                     </Fade>
                     <Fade top duration={2000}>
                         <div className="right">
-                            <h2>Get Started</h2>
-                            <p>Generate meaningful discussions with your audience and build a strong, 
-                            loyal community. Thnk of the insightful conversations you miss out with a 
-                            feedback from.</p>
+                            <h2>File Order</h2>
+                            <p>Too many files to save?. Filesurge is here to help you out. 
+                                We are the perfect solution to your problem. Join us now 
+                                and enjoy a lifetime of organized file storage.
+                            </p>
                         </div>
                     </Fade>
                 </section>
-                <section style={{backgroundColor: 'rgba(226, 248, 226, 0.281)'}}>
+                <section >
                     <Fade left>
                         <div className="left">
-                            <h2>Get Started</h2>
-                            <p>Generate meaningful discussions with your audience and build a strong, 
-                            loyal community. Thnk of the insightful conversations you miss out with a 
-                            feedback from.</p>
+                            <h2>Privacy</h2>
+                            <p> 
+                                Filesurge provides you with a secure file storage system, as
+                                protecting your data is our priority.
+                            </p>
                         </div>
                     </Fade>
                     <Fade right>
-                        <div className="right">
-                            <img src={require('./3.svg')}/>
+                        <div style={{padding: '5rem'}}  className="right">
+                            <img src={require('./svgs/6.png')}/>
                         </div>
                     </Fade>
                 </section>
@@ -104,3 +107,4 @@ class Home extends Component {
 }
 
 export default Home;
+

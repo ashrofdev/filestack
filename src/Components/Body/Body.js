@@ -3,7 +3,8 @@ import './style.css'
 import MyCabinet from '../MyCabinet/MyCabinets';
 import Profile from '../Profile/Profile';
 
-const Body = ({route, navigate, openFolder, fileType, upload}) => {
+const Body = ({route, navigate, openFolder, fileType, upload, user}) => {
+    console.log(user)
     return (
         <div className="body">
             <section className="side-nav">
@@ -34,7 +35,7 @@ const Body = ({route, navigate, openFolder, fileType, upload}) => {
             <section className="content"> 
                {
                    route === 'profile' ?
-                   <Profile/>:
+                   <Profile user={user}/>:
                    route === 'cabinet' || route === 'open' ?
                    <MyCabinet upload={upload} fileType={fileType} nav={route} openFolder={openFolder}/>:null
                }

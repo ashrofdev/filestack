@@ -10,14 +10,9 @@
   0% {
     top: 0;
   }
-  80% {
-    top: 4rem;
-    opacity: 1;
-    
-  }
   100% {
-    top: -2rem;
-    opacity: 1;
+    top: 4rem;
+    
   }
 }
 
@@ -41,18 +36,18 @@ button:active{
   font-family: sans-serif;
 }
 
+
 .alert {
-  animation: alert 5s alternate;
   padding: .5rem 3rem;
   font-size: 1.2rem;
   font-weight: 200;
   width: max-content;
-  box-shadow: 2px 3px 4px black;
+  box-shadow: 2px 3px 1rem black;
   position: fixed;
   left: 50%;
   top: -2rem;
   opacity: 0;
-  z-index: 100;
+  z-index: 10000;
 }
 .positive {
   background-color: var(--white);
@@ -61,6 +56,12 @@ button:active{
 .negative {
   background-color: red;
   color: var(--white);
+}
+
+.show_alert {
+  animation: alert 1s alternate;
+  opacity: 1;
+  top: 4rem;
 }
 
 .App-header {

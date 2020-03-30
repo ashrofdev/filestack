@@ -20,29 +20,109 @@ const files = [
         name: 'test.mp3',
         type: 'audio/mp3',
         size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },,
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    ,
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
+    },
+    {
+        name: 'test.mp3',
+        type: 'audio/mp3',
+        size: '40mb'
     }
 ]
 const Cabinet = ({fileType, upload}) => {
     return (
         <div className="cabinet page">
-            <h2>Here are your {fileType} files</h2>
-            <div>
+            <h2>{fileType} files</h2>
+            <div className="layout">
                 {
                     files.map(e=>{
-                        return <div className="filess">
-                            <span>▶️</span> 
-                            <p>{e.name}</p>
-                            <p>{e.type}</p>
-                            <p>{e.size}</p>
-                            <button className="delete">X</button>
-                         </div>
+                        return<div>
+                            <video controls>
+                                    <source src={require("./e.mp4")} type="video/mp4" />
+                                </video>
+                        </div>      
                     })
                 }
+                
             </div>
             <div className="cta">
                 <h3>Upload a new file</h3>
-                <label className="cta-btn" for="e">↑ Upload</label>
-                <input id="e" style={{visibility:'collapse', display: 'none'}}  onChange={(e)=>upload(e)} type="file"/>
+                <label className="cta-btn" for="upload">↑ Upload</label>
+                <input id="upload" style={{display: 'none'}}  onChange={(e)=>upload(e)} type="file"/>
             </div>
         </div>
     );
