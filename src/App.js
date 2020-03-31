@@ -5,7 +5,7 @@ import Body from './Components/Body/Body';
 import Home from './Components/LandingPage/Home';
 import Signup from './Components/Dictators/Signup';
 import LogIn from './Components/Dictators/Login';
-import { firebaseDB } from './Server';
+import { firebaseDB, storage } from './Server';
 
 class App extends Component {
 
@@ -38,7 +38,6 @@ class App extends Component {
   
   componentDidMount(){
     firebaseDB.ref('users').once('value').then(snapshot=>{
-      document.querySelector('.alert').classList.toggle('show_alert')
       console.log(snapshot.val())
       snapshot.forEach(e=>{
         this.state.users.push(e.val())
@@ -87,6 +86,20 @@ class App extends Component {
     const file = item.target.files[0]
     console.log(file.type)
 
+    const location = ()=>{ 
+      if (fileType.includes('image')){
+        return 'img'
+      }else if (fileType.includes('video')) {
+        return 'video'
+      }else if (fileType.includes('music')) {
+        return 'music'
+      }else if (fileType.includes('docs')) {
+        return 'docs'
+      }else if (fileType.includes('others')) {
+        return 'others'
+      }
+    }
+
     if (fileType !== 'other' && fileType !== 'document' && !file.type.includes(fileType)) {
       // this.setState({alert:{
       //   trigger: true,
@@ -100,6 +113,10 @@ class App extends Component {
       //   type: 'positive',
       //   message: 'Upload Completed'
       // }})
+      storage.ref(location()).put(file)
+      storage.ref(location()).getDownloadURL().then(e=>{
+        console.log(e)
+      })
       this.alert('positive', 'Upload Completed')
     }
     setTimeout(() => {
@@ -173,7 +190,7 @@ class App extends Component {
             <Body user={this.state.user} upload={this.upload} route={this.state.nav} navigate={this.navigate} 
             openFolder={this.openFolder} fileType={this.state.fileType}/>
             <footer>
-              <span>All rights reserved by <a blank href="https://ashrof.herokuapp.com/">ashrofDev</a></span>
+              <span>All rights reserved by <a blank='true' href="https://ashrof.herokuapp.com/">ashrofDev</a></span>
             </footer>
           </div>
         }
