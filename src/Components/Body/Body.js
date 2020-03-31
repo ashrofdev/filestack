@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css'
 import MyCabinet from '../MyCabinet/MyCabinets';
 import Profile from '../Profile/Profile';
+import Settings from '../Settings/Settings';
 
 const Body = ({route, navigate, openFolder, fileType, upload, user}) => {
     console.log(user)
@@ -26,7 +27,7 @@ const Body = ({route, navigate, openFolder, fileType, upload, user}) => {
                         {/* <li onClick={()=> navigate('profile')}><p>🗂 New File</p></li> */}
                         {
                             route === 'settings'?
-                            <li className="clicked" onClick={()=> navigate('profile')}><p>⚙️ Settings</p></li>:
+                            <li className="clicked" onClick={()=> navigate('settings')}><p>⚙️ Settings</p></li>:
                             <li onClick={()=> navigate('settings')}><p>⚙️ Settings</p></li>
                         }
                     </ul>
@@ -37,7 +38,9 @@ const Body = ({route, navigate, openFolder, fileType, upload, user}) => {
                    route === 'profile' ?
                    <Profile user={user}/>:
                    route === 'cabinet' || route === 'open' ?
-                   <MyCabinet upload={upload} fileType={fileType} nav={route} openFolder={openFolder}/>:null
+                   <MyCabinet upload={upload} fileType={fileType} nav={route} openFolder={openFolder}/>:
+                   route === 'settings'?
+                   <Settings/>:null
                }
             </section>
         </div>

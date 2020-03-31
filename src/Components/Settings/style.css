@@ -1,0 +1,55 @@
+.settings {
+
+}
+.settings header {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+.settings .edit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+}
+.edit input {
+    height: 1.6rem;
+    padding: .5rem;
+    font-size: 1.2rem;
+    margin: .5rem;
+    width: 20rem;
+}
+.edit button {
+    color: var(--white);
+    padding: .5rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: .5rem;
+    background-color: var(--color-primary);
+    margin-top: 1rem;
+    transition: all .2s;
+}
+
+
+
+
+.danger {
+    font-size: 1.2rem;
+    color: red;
+}
+.settings h4 {
+    font-size: 1.5rem;
+    background-color: rgb(222, 231, 231);
+    padding: .4rem;
+    margin-bottom: 1rem;
+}
+.danger button {
+    color: red;
+    padding: .5rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    transition: all .2s;
+}
+.danger button:hover {
+    background-color: red;
+    color: white;
+}

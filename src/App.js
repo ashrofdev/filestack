@@ -17,7 +17,7 @@ class App extends Component {
     ],
       user: {},
       fixHeader: false,
-      nav: 'cabinet',
+      nav: 'settings',
       fileType: '',
       fileName: '',
       fileSize: '',
