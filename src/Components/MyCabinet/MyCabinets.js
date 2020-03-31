@@ -17,7 +17,7 @@ const MyCabinet = ({openFolder, nav, fileType, upload}) => {
                         <figure>📁</figure>
                         VIDEO
                     </div>
-                    <div className="file" onClick={()=>openFolder('music')}>
+                    <div className="file" onClick={()=>openFolder('audio')}>
                         <figure>📁</figure>
                         MUSIC
                     </div>

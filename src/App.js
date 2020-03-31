@@ -13,13 +13,7 @@ class App extends Component {
     super()
     this.state = {
       route: '...',
-      users: [{
-        username: 'kobe',
-        password: '123'
-      },{
-        username: '',
-        password: ''
-      }
+      users: [
     ],
       user: {},
       fixHeader: false,
@@ -38,10 +32,13 @@ class App extends Component {
   
   componentDidMount(){
     firebaseDB.ref('users').once('value').then(snapshot=>{
-      console.log(snapshot.val())
       snapshot.forEach(e=>{
-        this.state.users.push(e.val())
+        this.state.users.push({
+          key: e.key,
+          val: e.val()
+        })
       })
+      console.log(this.state.users)
     })
 
     window.addEventListener('scroll',this.handleScroll)
@@ -55,10 +52,8 @@ class App extends Component {
   handleScroll = () => {
     if(window.scrollY > 40){
       this.setState({fixHeader: true})
-      console.log('ddddd')
     } else {
       this.setState({fixHeader: false})
-      console.log('ggggg')
     }
   }
 
@@ -86,37 +81,18 @@ class App extends Component {
     const file = item.target.files[0]
     console.log(file.type)
 
-    const location = ()=>{ 
-      if (fileType.includes('image')){
-        return 'img'
-      }else if (fileType.includes('video')) {
-        return 'video'
-      }else if (fileType.includes('music')) {
-        return 'music'
-      }else if (fileType.includes('docs')) {
-        return 'docs'
-      }else if (fileType.includes('others')) {
-        return 'others'
-      }
-    }
-
     if (fileType !== 'other' && fileType !== 'document' && !file.type.includes(fileType)) {
-      // this.setState({alert:{
-      //   trigger: true,
-      //   type: 'negative',
-      //   message: 'Wrong file type'
-      // }})
       this.alert('negative', 'Wrong file type')
     } else {
-      // this.setState({alert:{
-      //   trigger: true,
-      //   type: 'positive',
-      //   message: 'Upload Completed'
-      // }})
-      storage.ref(location()).put(file)
-      storage.ref(location()).getDownloadURL().then(e=>{
-        console.log(e)
+      storage.ref(fileType).child('name').put(file).then(e=>{
+        storage.ref(fileType).child('name').getDownloadURL().then(url=>{
+          console.log(url)
+          firebaseDB.ref(this.state.user.key).child(fileType).set({
+            name: url
+          })
+        })
       })
+      
       this.alert('positive', 'Upload Completed')
     }
     setTimeout(() => {
@@ -151,7 +127,8 @@ class App extends Component {
   ////////////// checking for authorixation on login//////////////////
   authenticate = (user) => {
     this.state.users.forEach(e=>{
-      if (user.username === e.username && user.password === e.password) {
+      const val = e.val
+      if (user.username === val.username && user.password === val.password) {
         console.log(e)
         this.setState({
           route: 'cabinet',
@@ -159,7 +136,7 @@ class App extends Component {
         })
       } else {
         console.log('authentication failed')
-        console.log(user)
+        console.log(user,e)
       }
     })
   }
