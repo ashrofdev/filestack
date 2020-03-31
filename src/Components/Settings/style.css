@@ -18,7 +18,11 @@
     margin: .5rem;
     width: 20rem;
     outline: none;
-    transition: all .5s;
+    transition: all .3s;
+    border: .5px solid rgb(218, 217, 217);
+}
+.edit input:hover {
+    background-color: rgba(6, 44, 6, 0.034);
 }
 .edit input:focus {
     border-color: transparent;
