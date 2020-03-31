@@ -17,6 +17,12 @@
     font-size: 1.2rem;
     margin: .5rem;
     width: 20rem;
+    outline: none;
+}
+.edit input::placeholder {
+    font-style: italic;
+    font-weight: 100;
+
 }
 .edit button {
     color: var(--white);
