@@ -62,7 +62,6 @@
     grid-column: 1/2;
     background-color: var(--primary-dark);
     grid-row: 1/-1;
-    height: 100vh;
     padding: 2rem 0;
     display: flex;
     flex-direction: column;

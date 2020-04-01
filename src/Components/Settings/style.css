@@ -1,9 +1,18 @@
 .settings {
 
 }
+.settings section {
+    padding: 2rem 0;
+}
 .settings header {
     font-size: 2rem;
     margin-bottom: 3rem;
+}
+.settings h4 {
+    font-size: 1.5rem;
+    background-color: rgb(222, 231, 231);
+    padding: .4rem;
+    margin-bottom: 1rem;
 }
 .settings .edit {
     display: flex;
@@ -43,25 +52,26 @@
     transition: all .2s;
 }
 
-
-
-
 .danger {
     font-size: 1.2rem;
     color: red;
 }
-.settings h4 {
-    font-size: 1.5rem;
-    background-color: rgb(222, 231, 231);
-    padding: .4rem;
-    margin-bottom: 1rem;
+.danger span {
+    background-color: rgba(226, 224, 224, 0.575);
+    padding: .5rem .2rem;
+    display: block;
+    font-size: .8rem;
+    font-weight: 100;
+    font-style: italic;
+    width: max-content;
+    margin: 1rem;
 }
 .danger button {
     color: red;
     padding: .5rem 1rem;
     border: 1px solid currentColor;
     border-radius: .5rem;
-    margin-top: 1rem;
+    margin: 1rem;
     transition: all .2s;
 }
 .danger button:hover {

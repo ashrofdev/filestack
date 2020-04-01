@@ -24,7 +24,11 @@ const Body = ({route, navigate, openFolder, fileType, upload, user}) => {
                             <li className="clicked" onClick={()=> navigate('cabinet')}><p>🗄 My cabinet</p></li>:
                             <li onClick={()=> navigate('cabinet')}><p>🗄 My cabinet</p></li>
                         }
-                        {/* <li onClick={()=> navigate('profile')}><p>🗂 New File</p></li> */}
+                        {
+                            route === 'share'?
+                            <li className="clicked" onClick={()=> navigate('share')}><p>⚙️ Share</p></li>:
+                            <li onClick={()=> navigate('share')}><p>⚙️ Share</p></li>
+                        }
                         {
                             route === 'settings'?
                             <li className="clicked" onClick={()=> navigate('settings')}><p>⚙️ Settings</p></li>:

@@ -26,6 +26,7 @@ const Settings = () => {
             <section className="danger">
                 <h4>Danger Zone</h4>
                 <p>Delete my account</p>
+                <span>Deleting your account wil make you loose all saved files permanently.</span>
                 <button>DELETE</button>
             </section>
         </div>
