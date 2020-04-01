@@ -1,109 +1,16 @@
 import React from 'react';
 
 const files = [
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },,
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    ,
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
-    {
-        name: 'test.mp3',
-        type: 'audio/mp3',
-        size: '40mb'
-    },
+    
+    
     {
         name: 'test.mp3',
         type: 'audio/mp3',
         size: '40mb'
     }
 ]
-const Cabinet = ({fileType, upload}) => {
+const Cabinet = ({user, fileType, upload}) => {
+    console.log(user.val.)
     return (
         <div className="cabinet page">
             <h2>{fileType} files</h2>

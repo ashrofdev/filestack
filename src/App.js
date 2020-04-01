@@ -87,9 +87,7 @@ class App extends Component {
       storage.ref(fileType).child('name').put(file).then(e=>{
         storage.ref(fileType).child('name').getDownloadURL().then(url=>{
           console.log(url)
-          firebaseDB.ref(this.state.user.key).child(fileType).set({
-            name: url
-          })
+          firebaseDB.ref(`users/${this.state.user.key}`).child(fileType).push(url)
         })
       })
       

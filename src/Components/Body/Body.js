@@ -42,7 +42,7 @@ const Body = ({route, navigate, openFolder, fileType, upload, user}) => {
                    route === 'profile' ?
                    <Profile user={user}/>:
                    route === 'cabinet' || route === 'open' ?
-                   <MyCabinet upload={upload} fileType={fileType} nav={route} openFolder={openFolder}/>:
+                   <MyCabinet user={user} upload={upload} fileType={fileType} nav={route} openFolder={openFolder}/>:
                    route === 'settings'?
                    <Settings/>:null
                }
