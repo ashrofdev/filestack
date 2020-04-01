@@ -10,7 +10,7 @@ const files = [
     }
 ]
 const Cabinet = ({user, fileType, upload}) => {
-    console.log(user.val.)
+    console.log(user.val.image)
     return (
         <div className="cabinet page">
             <h2>{fileType} files</h2>
