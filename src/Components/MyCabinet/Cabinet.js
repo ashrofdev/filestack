@@ -25,35 +25,44 @@ const Cabinet = ({user, fileType, upload}) => {
                     fileType === 'image'?
                     images.map(e=>{
                         return<div>
-                                <img src={e}/>
+                                <p>{e.name}</p>
+                                <a href={`${e.url}`} download>Download</a>
+                                <img src={e.url}/>
                         </div>      
                     }):
                     fileType === 'video'?
                     videos.map(e=>{
                         return<div>
+                                <p>{e.name}</p>
+                                <a href={`${e.url}`} download>Download</a>
                                 <video controls>
-                                    <source src={e}/>
+                                    <source src={e.url}/>
                                 </video>
                         </div>      
                     }):
                     fileType === 'audio'?
                     audio.map(e=>{
                         return<div>
+                                <p>{e.name}</p>
                                 <audio controls>
-                                    <source src={e}/>
+                                    <source src={e.url}/>
                                 </audio>
                         </div>      
                     }):
                     fileType === 'document'?
                     document.map(e=>{
                         return<div>
-                            <a href={`${e}`}>v</a>
+                                <p>{e.name}</p>
+                                <a target="_blank" href={`${e.url}`} download>Download</a>
+                            <a href={`${e.url}`}>v</a>
                         </div>      
                     }):
-                    fileType === 'others'?
+                    fileType === 'other'?
                     others.map(e=>{
                         return<div>
-                                <a href={`${e}`}>v</a>
+                                <p>{e.name}</p>
+                                <a href={`${e.url}`} download>Download</a>
+                                <a target="_blank" href={`${e.url}`}>v</a>
                         </div>      
                     }):null
 
