@@ -79,15 +79,18 @@ class App extends Component {
   upload = (item) => {
     const fileType = this.state.fileType
     const file = item.target.files[0]
-    console.log(file.type)
+    console.log(file.name)
 
     if (fileType !== 'other' && fileType !== 'document' && !file.type.includes(fileType)) {
       this.alert('negative', 'Wrong file type')
     } else {
-      storage.ref(fileType).child('name').put(file).then(e=>{
-        storage.ref(fileType).child('name').getDownloadURL().then(url=>{
+      storage.ref(fileType).child(file.name).put(file).then(e=>{
+        storage.ref(fileType).child(file.name).getDownloadURL().then(url=>{
           console.log(url)
-          firebaseDB.ref(`users/${this.state.user.key}`).child(fileType).push(url)
+          firebaseDB.ref(`users/${this.state.user.key}`).child(fileType).push().set({
+            name: file.name,
+            url
+          })
         })
       })
       
