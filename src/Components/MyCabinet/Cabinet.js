@@ -26,7 +26,7 @@ const Cabinet = ({user, fileType, upload}) => {
                     images.map(e=>{
                         return<div>
                                 <p>{e.name}</p>
-                                <a href={`${e.url}`} download>Download</a>
+                                <a href={`${e.url}`} download={`${e.url}`}>Download</a>
                                 <img src={e.url}/>
                         </div>      
                     }):

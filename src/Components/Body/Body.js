@@ -3,6 +3,7 @@ import './style.css'
 import MyCabinet from '../MyCabinet/MyCabinets';
 import Profile from '../Profile/Profile';
 import Settings from '../Settings/Settings';
+import Share from '../Share/Share';
 
 const Body = ({route, navigate, openFolder, fileType, upload, user}) => {
     console.log(user)
@@ -26,8 +27,8 @@ const Body = ({route, navigate, openFolder, fileType, upload, user}) => {
                         }
                         {
                             route === 'share'?
-                            <li className="clicked" onClick={()=> navigate('share')}><p>⚙️ Share</p></li>:
-                            <li onClick={()=> navigate('share')}><p>⚙️ Share</p></li>
+                            <li className="clicked" onClick={()=> navigate('share')}><p>📡 Share</p></li>:
+                            <li onClick={()=> navigate('share')}><p>📡 Share</p></li>
                         }
                         {
                             route === 'settings'?
@@ -43,6 +44,8 @@ const Body = ({route, navigate, openFolder, fileType, upload, user}) => {
                    <Profile user={user}/>:
                    route === 'cabinet' || route === 'open' ?
                    <MyCabinet user={user} upload={upload} fileType={fileType} nav={route} openFolder={openFolder}/>:
+                   route === 'share'?
+                   <Share/>:
                    route === 'settings'?
                    <Settings/>:null
                }
@@ -52,3 +55,4 @@ const Body = ({route, navigate, openFolder, fileType, upload, user}) => {
 };
 
 export default Body;
+

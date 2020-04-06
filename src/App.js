@@ -57,6 +57,7 @@ class App extends Component {
     }
   }
 
+
   getDate = () => {
     const getDate = new Date()
     const day = getDate.getDate()
