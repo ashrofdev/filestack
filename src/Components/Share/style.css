@@ -1,0 +1,40 @@
+.share {
+
+}
+.share header {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.share h3 {
+    margin: 2rem;
+}
+.share section {
+    padding: 1rem 0;
+}
+
+.share section .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2rem .5rem;
+    cursor: pointer;
+}
+.share section .item:hover {
+    background-color: rgb(245, 245, 245);
+}
+.share .media {
+    width: 2rem;
+    height: 2rem;
+}
+.share button {
+    padding: .2rem .5rem;
+    font-size: .8rem;
+    color: var(--color-primary);
+    border: 1px solid currentColor;
+    background-color: transparent;
+    transition: all .3s;
+}
+.share button:hover {
+    background-color: var(--color-primary);
+    color: var(--white);
+}

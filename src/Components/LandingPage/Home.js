@@ -4,6 +4,11 @@ import Fade from 'react-reveal/Fade'
 
 
 class Home extends Component {
+    componentDidMount() {
+        document.querySelectorAll('img').forEach(e=>{
+            e.addEventListener('click', ()=>e.requestFullscreen())
+          })
+    }
     render() {
     
         const {login, signUp} = this.props

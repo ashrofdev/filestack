@@ -31,6 +31,14 @@ class App extends Component {
   }
   
   componentDidMount(){
+
+    document.querySelectorAll('img').forEach(e=>{
+      e.addEventListener('click', ()=>{
+        e.requestFullscreen()
+      })
+    })
+
+
     firebaseDB.ref('users').once('value').then(snapshot=>{
       snapshot.forEach(e=>{
         this.state.users.push({
@@ -47,6 +55,8 @@ class App extends Component {
     setTimeout(() => {
       console.log(this.state.date)
     }, 2000);
+
+    
   }
 
   handleScroll = () => {
